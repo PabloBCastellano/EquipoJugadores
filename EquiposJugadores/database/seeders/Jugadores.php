@@ -18,7 +18,7 @@ class Jugadores extends Seeder
             DB::table('Jugadores')->insert([
 
                 "Name_Player"=>Str::random(10),
-                "T-Shirt_Number"=>random_int(0,50),
+                "TShirt_Number"=>random_int(0,50),
 
             ]);
         }

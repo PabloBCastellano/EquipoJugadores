@@ -19,7 +19,7 @@ class JugadoresFactory extends Factory
         return [
             "Id_Player"=>$this->faker->id(),
             "Name_Player"=>$this->faker->name(),
-            "T-Shirt_Number"=>$this->faker->number(),
+            "TShirt_Number"=>$this->faker->number(),
 
         ];
     }

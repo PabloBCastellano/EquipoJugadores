@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id("Id_Player");
             $table->string('Name_Player');
 
-            $table->integer("T-Shirt_Number");
+            $table->integer("TShirt_Number");
 
         });
     }
