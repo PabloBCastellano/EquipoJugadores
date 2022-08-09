@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jugadores;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\DB;
+
+
 class JugadoresController extends Controller
 {
     /**
@@ -12,6 +15,7 @@ class JugadoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -79,8 +83,16 @@ class JugadoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        for($i=0;$i<sizeof($request->Elegir);$i++){
+            Jugadores::where("Id_Player",$request->Elegir[$i])->delete();
+        }
+
+        $Jugadores=DB::table("Jugadores")->get();
+        return view("JugadoresDisponibles",['PlantillaJugadores' => $Jugadores]);
+
+
+
     }
 }

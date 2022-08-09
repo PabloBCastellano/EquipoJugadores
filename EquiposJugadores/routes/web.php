@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\JugadoresController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get("/VerJugadores",[JugadoresController::class,"show"]);
+
+Route::post("/VerJugadores",[JugadoresController::class,"destroy"])
+
+->name("BorrarUsuario");
