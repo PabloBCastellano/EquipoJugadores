@@ -27,7 +27,7 @@ class Equipos extends Seeder
                 DB::table('Equipos')->insert([
 
                 "Name_Team"=>Str::random(10),
-                "Id_Player"=>$i,
+
 
             ]);
         }

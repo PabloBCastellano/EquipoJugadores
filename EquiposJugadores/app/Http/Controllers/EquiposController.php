@@ -49,8 +49,7 @@ class EquiposController extends Controller
     public function show()
     {
         $Equipos=DB::table("Equipos")
-        ->join("Jugadores","Equipos.Id_Player","=","Jugadores.Id_Player")
-        ->select("Jugadores.Name_Player","Equipos.*")
+
         ->get();
 
         return view("EquiposDisponibles",["EquiposActuales"=>$Equipos]);
@@ -92,8 +91,7 @@ class EquiposController extends Controller
         }
 
         $Equipos=DB::table("Equipos")
-        ->join("Jugadores","Equipos.Id_Player","=","Jugadores.Id_Player")
-        ->select("Jugadores.Name_Player","Equipos.*")
+
         ->get();
 
         return view("EquiposDisponibles",["EquiposActuales"=>$Equipos]);

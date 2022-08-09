@@ -19,7 +19,7 @@
             <tr>
                 <th scope="col">Seleccionar</th>
                 <th scope="col">Nombre Equipo</th>
-                <th scope="col">Nombre Jugador</th>
+
 
             </tr>
             </thead>
@@ -29,7 +29,7 @@
                 <tr>
                     <th scope="row"><input type="checkbox" name="Elegir[]" value="{{ $Equipo->Id_Team }} "/>{{ $Equipo->Id_Team }}</th>
                     <td> <input type="text" name="NameTeam" value="{{ $Equipo->Name_Team }}"/></td>
-                    <td><input type="text" name="NamePlayer" value="{{ $Equipo->Name_Player }}" /></td>
+
                 </tr>
                 @endforeach
                 </tbody>

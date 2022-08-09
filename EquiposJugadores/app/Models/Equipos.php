@@ -9,7 +9,7 @@ class Equipos extends Model
 {
 
 
-    public function Jugadores(){
+    /*public function Jugadores(){
         return $this->belongsTo(Jugadores::class);
-    }
+    }*/
 }

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jugadores extends Model
 {
-    public function Equipos(){
+    /*public function Equipos(){
         return $this->hasOne(Equipos::class);
 
-    }
+    }*/
 }
