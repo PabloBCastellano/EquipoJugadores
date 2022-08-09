@@ -34,7 +34,7 @@
                 @endforeach
                 </tbody>
         </table>
-        <input type="submit" name="BorrarUsuario" href="{{ route('BorrarUsuario') }}"value="Borrar Usuario"/>
+        <input type="submit" name="BorrarEquipo" href="{{ route('BorrarEquipo') }}"value="Borrar Equipo"/>
     </form>
 </body>
 </html>

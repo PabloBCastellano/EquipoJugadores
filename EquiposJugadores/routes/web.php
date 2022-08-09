@@ -27,3 +27,7 @@ Route::post("/VerJugadores",[JugadoresController::class,"destroy"])
 ->name("BorrarUsuario");
 
 Route::get("/VerEquipos",[EquiposController::class,"show"]);
+
+Route::post("/VerEquipos",[EquiposController::class,"destroy"])
+
+->name("BorrarEquipo");

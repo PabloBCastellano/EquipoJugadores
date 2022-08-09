@@ -85,8 +85,21 @@ class EquiposController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        for($i=0;$i<sizeof($request->Elegir);$i++){
+            Equipos::where("Id_Team",$request->Elegir[$i])->delete();
+        }
+
+        $Equipos=DB::table("Equipos")
+        ->join("Jugadores","Equipos.Id_Player","=","Jugadores.Id_Player")
+        ->select("Jugadores.Name_Player","Equipos.*")
+        ->get();
+
+        return view("EquiposDisponibles",["EquiposActuales"=>$Equipos]);
+
+
+
+
     }
 }
