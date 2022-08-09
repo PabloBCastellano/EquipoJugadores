@@ -39,7 +39,7 @@
             <div class="card mt-3" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Ver Equipos</h5>
-                  <a href="#" class="card-subtitle mb-2 card-link">Listar Equipos</a>
+                  <a href="{{ url('/VerEquipos') }}" class="card-subtitle mb-2 card-link">Listar Equipos</a>
 
                 </div>
               </div>

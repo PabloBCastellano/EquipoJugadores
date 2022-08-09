@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EquiposController;
 use App\Http\Controllers\JugadoresController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -24,3 +25,5 @@ Route::get("/VerJugadores",[JugadoresController::class,"show"]);
 Route::post("/VerJugadores",[JugadoresController::class,"destroy"])
 
 ->name("BorrarUsuario");
+
+Route::get("/VerEquipos",[EquiposController::class,"show"]);
