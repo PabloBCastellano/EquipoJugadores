@@ -30,7 +30,7 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Añadir Jugadores</h5>
-                  <a href="#" class="card-subtitle mb-2 card-link">Nuevos Jugadores</a>
+                  <a href="{{ url('/NuevoJugador') }}" class="card-subtitle mb-2 card-link">Nuevos Jugadores</a>
 
                 </div>
               </div>

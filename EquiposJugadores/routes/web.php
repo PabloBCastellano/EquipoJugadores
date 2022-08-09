@@ -26,6 +26,11 @@ Route::post("/VerJugadores",[JugadoresController::class,"destroy"])
 
 ->name("BorrarUsuario");
 
+Route::get("/NuevoJugador",function(){
+    return view("NuevoJugador");
+})->name("FormularioJugador");
+Route::post("/NuevoJugador",[JugadoresController::class,"create"]
+)->name("NuevoJugador");
 Route::get("/VerEquipos",[EquiposController::class,"show"]);
 
 Route::post("/VerEquipos",[EquiposController::class,"destroy"])
