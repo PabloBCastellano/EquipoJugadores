@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class JugadoresFactory extends Factory
+class EquiposFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,9 @@ class JugadoresFactory extends Factory
     public function definition()
     {
         return [
-            "Id_Player"=>$this->faker->id(),
-            "Name_Player"=>$this->faker->name(),
-            "T-Shirt_Number"=>$this->faker->number(),
-
+          "Id_Team"=>$this->faker->id(),
+          "Name_Team"=>$this->faker->name(),
+          "Id_Player"=>$this->faker->unsignedBigInteger(),
         ];
     }
 }
