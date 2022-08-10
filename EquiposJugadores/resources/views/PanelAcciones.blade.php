@@ -57,7 +57,7 @@
                 <div class="card mt-3" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Añadir Jugador a Equipo</h5>
-                        <a href="{{ url('/NuevoEquipo') }}" class="card-subtitle mb-2 card-link">Añadir Jugdor a Equipo</a>
+                        <a href="{{ url('/AsignarEquipo') }}" class="card-subtitle mb-2 card-link">Añadir Jugdor a Equipo</a>
 
                     </div>
                 </div>

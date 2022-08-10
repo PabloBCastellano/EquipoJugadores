@@ -45,3 +45,10 @@ Route::post("/NuevoEquipo",[EquiposController::class,"create"]
 Route::post("/VerEquipos",[EquiposController::class,"destroy"])
 
 ->name("BorrarEquipo");
+
+
+Route::get("/AsignarEquipo",[EquiposController::class,"index"]);
+
+Route::post("/AsignarEquipo",[EquiposController::class,"store"])->name("EquipoJugador");
+
+

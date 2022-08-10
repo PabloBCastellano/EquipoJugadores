@@ -14,9 +14,11 @@ class EquiposController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public static function index()
     {
-        //
+        $Equipos=DB::table("Equipos")->get();
+        $Jugadores=DB::table("Jugadores")->get();
+        return view("AñadirJugadorEquipo",["Equip"=>$Equipos,"Jug"=>$Jugadores]);
     }
 
     /**
@@ -41,7 +43,18 @@ class EquiposController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Equipo=$request->Equipos;
+        $Jugador=$request->Jugadores;
+        if(DB::table("jugadoresyequipos")->insert([
+            "Id_Player"=>$Jugador,
+            "Id_Team"=>$Equipo
+        ])){
+            echo "<script>alert('Jugador Asignado a Equipo');</script>";
+            $Equipos=DB::table("Equipos")->get();
+            $Jugadores=DB::table("Jugadores")->get();
+            return view("AñadirJugadorEquipo",["Equip"=>$Equipos,"Jug"=>$Jugadores]);
+        }
+
     }
 
     /**
@@ -105,3 +118,4 @@ class EquiposController extends Controller
 
     }
 }
+
