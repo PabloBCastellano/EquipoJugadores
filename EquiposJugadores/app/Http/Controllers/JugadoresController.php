@@ -26,9 +26,16 @@ class JugadoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view("NuevoJugador");
+        if(DB::table("Jugadores")->insert([
+            "Name_Player"=>$request->Player_Name,
+            "TShirt_Number"=>$request->TShirt_Number
+        ])){
+            echo "<script>alert('Nuevo Jugador dado de Alta');</script>";
+            return view("NuevoJugador");
+        }
+
     }
 
     /**

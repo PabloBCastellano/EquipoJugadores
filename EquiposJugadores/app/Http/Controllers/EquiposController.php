@@ -24,9 +24,13 @@ class EquiposController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create(Request $request)
+    {   if(DB::table("Equipos")->insert([
+            "Name_Team"=>$request->Team_Name
+        ])){
+            echo "<script>alert('Nuevo Equipo dado de Alta');</script>";
+            return view("NuevoEquipo");
+        }
     }
 
     /**

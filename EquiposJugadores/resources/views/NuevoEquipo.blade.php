@@ -11,26 +11,22 @@ crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
 </script>
 <script src="{{ asset('../resources/js/Validaciones.js')}}" defer></script>
-    <title>Añadir Jugador</title>
+    <title>Añadir Equpo</title>
 </head>
 <body>
     <form  method="POST">
         @csrf
         <div class="mb-3">
-          <label  class="form-label">Nombre del Jugador</label>
-          <input type="text" class="form-control" name="Player_Name" />
+          <label  class="form-label">Nombre del Equpipo</label>
+          <input type="text" class="form-control" name="Team_Name" />
 
         </div>
-        <div class="mb-3">
-          <label  class="form-label">Numero de Camiseta</label>
-          <input type="number" class="form-control" name="TShirt_Number" />
-        </div>
-        <br>
+
         <div class="mb-3 position-relative" id="Enviar">
-            <button type="submit" name="NuevoJugador" href="{{ route('FormularioJugador') }}" class="position-absolute  top-100 start-50 translate-middle btn btn-primary">Dar de Alta al Jugador</button>
+            <button type="submit"  href="{{ route('NuevoEquipo') }}" class="position-absolute  top-100 start-50 translate-middle btn btn-primary" style="margin-top:2rem;">Dar de Alta al Equipo</button>
 
         </div>
       </form>
-      <a  name="NuevoJugador"  href="{{ url('/ ') }}" class="position-absolute  top-0 start-50 translate-middle btn btn-primary "style="margin-left:20rem;margin-top:12.2rem;">Panel De Control</button>
+      <a    href="{{ url('/ ') }}" class="position-absolute  translate-middle btn btn-primary "style="margin-left:60rem;margin-top:2rem;">Panel De Control</button>
 </body>
 </html>
