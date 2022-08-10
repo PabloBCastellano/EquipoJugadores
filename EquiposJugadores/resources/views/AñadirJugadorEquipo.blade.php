@@ -35,7 +35,7 @@ crossorigin="anonymous"></script>
             </select>
           </div>
         <div class="mb-3 position-relative" id="Enviar">
-            <button type="submit"  href="{{ route('EquipoJugador') }}" class="position-absolute  top-100 start-50 translate-middle btn btn-primary" style="margin-top:2rem;">Dar de Alta al Equipo</button>
+            <button type="submit"  href="{{ route('EquipoJugador') }}" class="position-absolute  top-100 start-50 translate-middle btn btn-primary" style="margin-top:2rem;">Dar de Alta Jugador En el Equipo</button>
 
         </div>
       </form>

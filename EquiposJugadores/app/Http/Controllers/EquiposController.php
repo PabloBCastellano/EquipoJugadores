@@ -54,6 +54,12 @@ class EquiposController extends Controller
             $Jugadores=DB::table("Jugadores")->get();
             return view("AñadirJugadorEquipo",["Equip"=>$Equipos,"Jug"=>$Jugadores]);
         }
+        else{
+            echo "<script>alert('Un Jugador No puede estar en Varios equipos a la vez');</script>";
+            $Equipos=DB::table("Equipos")->get();
+            $Jugadores=DB::table("Jugadores")->get();
+            return view("AñadirJugadorEquipo",["Equip"=>$Equipos,"Jug"=>$Jugadores]);
+        }
 
     }
 
